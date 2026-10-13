@@ -18,6 +18,8 @@ const SECURITY_HEADERS = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	// Docker: the image runs .next/standalone/server.js instead of the full node_modules.
+	output: "standalone",
 	poweredByHeader: false,
 	images: {
 		remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
